@@ -38,7 +38,7 @@
     end
     @testset "5-bus weights case" begin
         data = PowerModels.parse_file("../test/data/case5.raw")
-        add_load_weights!(data)
+        PowerModels.update_data!(data, case5_load_weights)
 
         result = PowerModelsRestoration.run_ac_mld_uc(data, ipopt_solver)
 

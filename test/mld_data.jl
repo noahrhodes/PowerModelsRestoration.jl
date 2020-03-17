@@ -101,8 +101,7 @@ end
     for (i,load) in data["load"]
         @test !haskey(load, "weight")
     end
-
-    add_load_weights!(data)
+    PowerModels.update_data!(data, case5_load_weights)
 
     loads = data["load"]
     @test loads["1"]["weight"] == 100.0

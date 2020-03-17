@@ -67,7 +67,7 @@
     end
     @testset "5-bus pti weights" begin
         data = PowerModels.parse_file("../test/data/case5.raw")
-        add_load_weights!(data)
+        PowerModels.update_data!(data, case5_load_weights)
 
         result = run_mld(data, PowerModels.ACPPowerModel, ipopt_solver)
 
@@ -167,7 +167,7 @@ case24_ub = run_mld(case24, PowerModels.ACPPowerModel, ipopt_solver)["objective"
     end
     @testset "5-bus pti weights" begin
         data = PowerModels.parse_file("../test/data/case5.raw")
-        add_load_weights!(data)
+        PowerModels.update_data!(data, case5_load_weights)
 
         result = run_mld(data, PowerModels.DCPPowerModel, ipopt_solver)
 

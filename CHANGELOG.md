@@ -1,5 +1,8 @@
 # PowerModelsRestoration.jl Change Log
 
+## v0.4.0
+- Remove `add_load_weights!` function (#38)
+
 ## Staged
 - nothing
 

@@ -176,3 +176,14 @@ function get_active_items(network::Dict{String, Any})
 
     return active
 end
+
+
+const case5_load_weights = Dict(
+    "load" => Dict(
+        "1" => Dict("weight" => 100.0),
+        "2" => Dict("weight" =>  10.0),
+        #"3" => Dict("weight" =>   1.0), # tests implicit weight
+        "4" => Dict("weight" =>   1.0),
+    )
+)
+
